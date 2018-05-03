@@ -8,4 +8,4 @@ export CUDA_DEVICE_ORDER=PCI_BUS_ID
 export CUDA_VISIBLE_DEVICES=$gpu
 
 export MKL_NUM_THREADS=1 # For Anaconda MKL thing
-$@
+"$@"
