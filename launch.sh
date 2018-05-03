@@ -6,4 +6,6 @@
 gpu=`nvidia-smi --query-gpu=memory.free,index --format=csv,noheader,nounits | sort -nr | sed "s/^[0-9]+,[ \t]*//" -r | head -1`
 export CUDA_DEVICE_ORDER=PCI_BUS_ID
 export CUDA_VISIBLE_DEVICES=$gpu
+
+export MKL_NUM_THREADS=1 # For Anaconda MKL thing
 $@
